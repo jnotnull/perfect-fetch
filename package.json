@@ -1,0 +1,25 @@
+{
+  "name": "perfect-fetch",
+  "version": "1.0.0",
+  "description": "fetch的完整解决方案",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jnotnull/perfect-fetch.git"
+  },
+  "keywords": [
+    "fetch"
+  ],
+  "author": "jnotnull",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jnotnull/perfect-fetch/issues"
+  },
+  "homepage": "https://github.com/jnotnull/perfect-fetch#readme",
+  "dependencies": {
+    "url-search-params-polyfill": "^1.0.2"
+  }
+}
