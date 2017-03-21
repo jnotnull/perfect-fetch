@@ -1,11 +1,20 @@
-##基于react的dva代码生成器
+##fetch的完整解决方案
 
-一键生成model、route、less、proxy文件
+支持请求和文件上传
 
 ##安装 
 
-	npm install dva-generator -g
+	npm install perfect-fetch
 
-##执行
+##使用
+	
+	import {nodeserver} from '../common/config';
+	import {sendrequest, upload} from 'prefech-fetch';
 
-	generate-dva bot
+	export function querycmspage(data){
+		return sendrequest(`${nodeserver}/room/timer/querycmspage`, data)
+	}
+
+	export function uploadimg(input){
+		return upload(`${nodeserver}/room/timer/upload`, input)
+	}
