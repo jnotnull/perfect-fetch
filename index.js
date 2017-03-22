@@ -3,7 +3,11 @@ var URLSearchParams = require('url-search-params');
 
 
 module.exports = {
-    sendrequest: function(url, data, method = 'post') {
+    sendrequest: function(url, data, method) {
+        if (!method) {
+            method = 'post';
+        }
+
         let searchParams = new URLSearchParams();
         if (data) {
             for (let param in data) {
@@ -26,7 +30,11 @@ module.exports = {
                 return data;
             });
     },
-    upload: function(url, file, method = 'post') {
+    upload: function(url, file, method) {
+        if (!method) {
+            method = 'post';
+        }
+
         var formData = new FormData()
         formData.append('image', file);
 
