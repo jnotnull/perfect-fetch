@@ -1,16 +1,15 @@
 'use strict';
 var URLSearchParams = require('url-search-params');
 
-
 module.exports = {
     sendrequest: function(url, data, method) {
         if (!method) {
             method = 'post';
         }
 
-        let searchParams = new URLSearchParams();
+        var searchParams = new URLSearchParams();
         if (data) {
-            for (let param in data) {
+            for (var param in data) {
                 if (data[param] !== null) {
                     searchParams.append(param, JSON.stringify(data[param]));
                 }
@@ -25,8 +24,10 @@ module.exports = {
                 },
                 "body": searchParams.toString()
             })
-            .then(res => res.json())
-            .then(data => {
+            .then(function(res){
+                return res.json()
+            })
+            .then(function(data){
                 return data;
             });
     },
@@ -42,8 +43,10 @@ module.exports = {
                 method: 'POST',
                 body: formData
             })
-            .then(res => res.json())
-            .then(data => {
+            .then(function(res){
+                return res.json()
+            })
+            .then(function(data){
                 return data;
             });
     }
