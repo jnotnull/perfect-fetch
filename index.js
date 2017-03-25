@@ -9,11 +9,7 @@ module.exports = {
 
         var searchParams = new URLSearchParams();
         if (data) {
-            for (var param in data) {
-                if (data[param] !== null) {
-                    searchParams.append(param, JSON.stringify(data[param]));
-                }
-            }
+            searchParams.append("data", JSON.stringify(data));
         }
 
         return fetch(url, {
