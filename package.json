@@ -1,6 +1,6 @@
 {
   "name": "perfect-fetch",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "fetch的完整解决方案",
   "main": "index.js",
   "scripts": {
