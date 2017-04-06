@@ -15,7 +15,7 @@
 		return sendrequest(`${nodeserver}/room/timer/querycmspage`, {
 			id: 1,
 			name: 'jnotnull'
-			})
+		})
 	}
 
 	export function uploadimg(event){
